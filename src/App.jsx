@@ -99,8 +99,12 @@ function App() {
 
     return (
         <div className="app-wrapper">
-            {/* Background gradient overlay */}
-            <div className="app-bg-gradient" aria-hidden="true" />
+            {/* Ambient orbs */}
+            <div className="app-orbs" aria-hidden="true">
+                <div className="app-orb app-orb--1" />
+                <div className="app-orb app-orb--2" />
+                <div className="app-orb app-orb--3" />
+            </div>
 
             {/* Header */}
             <Header
