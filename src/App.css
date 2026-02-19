@@ -1,0 +1,119 @@
+.top-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding-top: 32px;
+    margin-bottom: 24px;
+}
+
+.ai-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    background: var(--bg-card);
+    border-radius: 20px;
+    padding: 28px 24px;
+    border: 1.5px solid var(--border-color);
+    box-shadow: var(--shadow-md);
+    animation: fadeInUp 0.4s ease;
+    transition: all 0.3s ease;
+}
+
+.ai-section:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+.section-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-primary);
+}
+
+.section-label__dot {
+    width: 6px;
+    height: 6px;
+    background: var(--accent-primary);
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(99, 102, 241, 0.6);
+    animation: pulse 2s infinite;
+}
+
+.form-section {
+    margin-bottom: 24px;
+}
+
+.list-section {
+    /* Full width, no extra margin needed */
+}
+
+/* ===== Toast ===== */
+.toast {
+    position: fixed;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background: #1e293b;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 0.3s ease;
+    white-space: nowrap;
+    max-width: calc(100vw - 40px);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.toast--danger {
+    background: rgba(127, 29, 29, 0.95);
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+[data-theme="light"] .toast {
+    background: #0f172a;
+}
+
+/* ===== Footer ===== */
+.app-footer {
+    text-align: center;
+    padding: 20px 24px;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 20px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+    .top-section {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding-top: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .top-section {
+        padding-top: 20px;
+    }
+
+    .ai-section {
+        padding: 22px 18px;
+    }
+
+    .toast {
+        bottom: 20px;
+        font-size: 0.82rem;
+        padding: 10px 18px;
+    }
+}
